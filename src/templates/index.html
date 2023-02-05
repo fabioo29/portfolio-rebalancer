@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="../static/main.js"></script>
+    <title>Portfolio Rebalancer</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Portfolio Rebalancer</h1>
+        <form>
+            <div class="form-group">
+                <label for="cashInput">Cash</label>
+                <input type="number" class="form-control" id="cashInput" placeholder="Enter cash amount" />
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Ticker</th>
+                        <th scope="col">Current Value</th>
+                        <th scope="col">Target Allocation</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="assetsTableBody">
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Ticker" />
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Current Value" />
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" placeholder="Target Allocation" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" id="addAssetBtn">
+                Add Asset
+            </button>
+            <button type="button" class="btn btn-success" id="rebalanceBtn">
+                Rebalance
+            </button>
+            <button type="button" class="btn btn-warning" id="clearBtn">
+                Clear
+            </button>
+        </form>
+        <!-- table to show results if rebalanced_portfolio_data is not empty -->
+        <table class="table mt-5" id="resultsTable">
+            <thead>
+                <tr>
+                    <th scope="col">Ticker</th>
+                    <th scope="col">Order</th>
+                    <th scope="col">Asset (After)</th>
+                    <th scope="col">Allocation (Before)</th>
+                    <th scope="col">Target Allocation</th>
+                    <th scope="col">Allocation (After)</th>
+                    <th scope="col">Difference</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTableBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
