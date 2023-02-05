@@ -1,0 +1,11 @@
+.container {
+    padding-top: 50px;
+}
+
+#cashInput {
+    width: 150px;
+}
+
+#rebalanceBtn {
+    margin-top: 20px;
+}
