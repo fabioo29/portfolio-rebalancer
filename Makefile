@@ -11,7 +11,7 @@ push-image:
 
 deploy-host:
 	ssh ${host} "sudo docker rm portfolio-rebalancer -f || true"
-	ssh ${host} "sudo docker run -d --restart=always --name portfolio-rebalancer portfolio-rebalancer:latest"
+	ssh ${host} "sudo docker run -d --restart=always -p 5000:5000 --name portfolio-rebalancer portfolio-rebalancer:latest"
 
 run-pipeline:
 	make build-local
