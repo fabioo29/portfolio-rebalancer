@@ -1,4 +1,6 @@
 # portfolio-rebalancer
+<!-- image from assets-->
+![preview](./assets/preview.png)
 A web-based app built with Flask to help you allocate your investments and restore balance to your portfolio.
 ## Overview
 Portfolio Rebalancer is a Flask-based application that helps you optimize your investment portfolio by rebalancing it to the desired allocation you specify. It makes use of the scipy library's optimization algorithms to find the optimal distribution of assets in your portfolio.
